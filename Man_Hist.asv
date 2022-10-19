@@ -1,0 +1,8 @@
+clc; 
+clear all;
+close all;
+
+%Abrir imagen
+prompt={"Ingrese el nombre de la imagen"};
+title='Imagen';
+definput=[1 35];
