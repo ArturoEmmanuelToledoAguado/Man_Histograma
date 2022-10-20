@@ -7,7 +7,7 @@ PDI se puede definir como el conjunto de procesamientos que se realizan sobre un
 ## Lectura de imágenes en matlab
 Para leer una imágen en matlab se utiliza la función <a href="https://la.mathworks.com/help/matlab/ref/imread.html"> **imread**</a> y se asigna a una variable que representara a la imágen.
 
-<code>imagen = imread('ruta/nombre de la imágen.extensión');</code>
+<h5 align="center"><code>imagen = imread('ruta/nombre de la imágen.extensión');</code></h5>
 
 ## MEJORAMIENTO Y RESTAURACIÓN DE UNA IMAGEN
 ## ¿Cuando se dice que una imagen ha sido mejorada?
@@ -27,11 +27,12 @@ En el histograma de una imagen se combinan dos variables, una para cada eje. En 
 
 Con la función <a href="https://la.mathworks.com/help/images/ref/imhist.html?s_tid=doc_ta">imhist</a> podemos visualizar el histograma de una imagen en escala de grises, si se desea visualizar el histograma de una imagen a color, se debe realizar el histograma de cada plano, el cual saldrá en escala de grises
 
-<code>imhist(imagen)</code>
+<h5 align="center"><code>imhist(imagen)</code></h5>
 
 * Nota: Cualquier modificación en el histograma de un plano de la imagen, puede reconstruir la imágen
 
-![hist](imgDoc/bases.gif)
+<h3 align="center"><img src="/imgDoc/bases.gif"></h3>
+
 
 ### Manipulación del histograma
 Esta técnica como las mencionadas en el <a href="https://github.com/ArturoEmmanuelToledoAguado/Transformaciones-comunes">mejoramiento digital de imágenes</a>, se emplea en el dominio espacial, es decir, se trabaja directamente sobre los pixeles de la imagen.
@@ -41,15 +42,15 @@ Las funciones de transformación de intensidad, dependen únicamente de los valo
 * Nota: Si se altera el histograma no se altera la posicion de los pixeles
 * Nota: El histograma ayuda a distribuir de mejor manera las tonalidades (0 - 255), ademas muestra cual valor abunda más (contraste)
 
-![gamma](imgDoc/gamma.gif)
+<h3 align="center"><img src="/imgDoc/gamma.gif"></h3>
 
 Para lograr manipular el histograma en matlab, es necesario hacer uso de la función <a href="https://la.mathworks.com/help/images/ref/imadjust.html?s_tid=doc_ta">imadjust</a> la cual aumenta el contraste de la imagen asignando los valores de la imagen de intensidad de entrada a nuevos valores de modo que, exista una mejor distribución de los datos en el histograma
 
-<code>imcont=imadjust(img)</code>
+<h5 align="center"><code>imcont=imadjust(img)</code></h5>
 
 Esta función tambien permite argumentos tales como el rango de los valores de intensidad de la imagen de entrada que se desea mapear y el rango de valores de estos a la salida
 
-<code>imcont=imadjust(img,[low_in high_in],[low_out high_out])</code>
+<h5 align="center"><code>imcont=imadjust(img,[low_in high_in],[low_out high_out])</code></h5>
 
 * Nota: Los valores están ponderados en el rango entre 0 y 1,por lo que se requiere dividir el número entre 255 ($\frac{0 - 255}{255}$)
 
@@ -61,8 +62,8 @@ Gamma puede ser cualquier valor entre 0 e infinito.
   * Si $\gamma$<1, la asignación se pondera hacia valores de salida más altos (más brillantes).
   * Si $\gamma$>1, la asignación se pondera hacia valores de salida más bajos (más oscuros)
 
-<code>imcont=imadjust(img,[low_in high_in],[low_out high_out],gamma)</code>
+<h5 align="center"><code>imcont=imadjust(img,[low_in high_in],[low_out high_out],gamma)</code></h5>
 
-![gammas](imgDoc/gammas.png)
+<h3 align="center"><img src="/imgDoc/gammas.png"></h3>
 
 <a href="https://github.com/ArturoEmmanuelToledoAguado/Man_Histograma">Código</a>
