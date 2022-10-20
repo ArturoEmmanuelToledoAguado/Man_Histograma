@@ -1,15 +1,15 @@
-# Introducción
+# Introducción 📖
 Se propone realizar un programa que pueda realizar diferentes pruebas de ajuste del histograma con diferentes rangos y diferentes imágenes en escala de grises y a color con la finalidad de mejorar las imágenes
 
-## ¿Qué es el procesamiento digital de imagenes (PDI)?
+## ¿Qué es el procesamiento digital de imagenes (PDI)? 🤷‍♂️🤷‍
 PDI se puede definir como el conjunto de procesamientos que se realizan sobre una imagen digital ya sea para realizar su almacenamiento, transmisión o tratamiento.
 
-## Lectura de imágenes en matlab
+## Lectura de imágenes en matlab 👓
 Para leer una imágen en matlab se utiliza la función <a href="https://la.mathworks.com/help/matlab/ref/imread.html"> **imread**</a> y se asigna a una variable que representara a la imágen.
 
 <h5 align="center"><code>imagen = imread('ruta/nombre de la imágen.extensión');</code></h5>
 
-## MEJORAMIENTO Y RESTAURACIÓN DE UNA IMAGEN
+## MEJORAMIENTO Y RESTAURACIÓN DE UNA IMAGEN 📈
 ## ¿Cuando se dice que una imagen ha sido mejorada?
 * El término de mejoramiento digital de imágenes, es realmente subjetivo en el sentido de 2 o más observadores pueden tener criterios diferentes para decir si una imagen ha sido supuestamente mejorada o no
 * De hecho lo que para un observador puede ser mejoramiento para otro puede ser empeoramiento
@@ -20,7 +20,7 @@ Para leer una imágen en matlab se utiliza la función <a href="https://la.mathw
 - Acentuación de determinadas frecuencias o datos espaciales
 - Atenuación de ruido
 
-### El histograma de una imagen
+### El histograma de una imagen 
 Un histograma es una imagen que nos muestra la frecuencia con la que se repiten determinados valores.
 
 En el histograma de una imagen se combinan dos variables, una para cada eje. En el eje vertical encontramos la cantidad de pixeles. En el eje horizontal, encontramos los valores de luminosidad.
@@ -54,10 +54,10 @@ Esta función tambien permite argumentos tales como el rango de los valores de i
 
 * Nota: Los valores están ponderados en el rango entre 0 y 1,por lo que se requiere dividir el número entre 255 ( $\frac{0 - 255}{255}$ )
 
-### Gamma ( $\gamma$ ) en imadjust
+### Gamma ( $\gamma$ ) en imadjust 
 Finalmente también tenemos la opción de introducir el parámetro $\gamma$ que especifica la forma de la curva que mapea los valores de intensidad
 
-Gamma puede ser cualquier valor entre 0 e infinito. 
+Gamma puede ser cualquier valor entre 0 e infinito. ♾
   * Si $\gamma=1$ (valor predeterminado), la asignación es lineal
   * Si $\gamma<1$, la asignación se pondera hacia valores de salida más altos (más brillantes).
   * Si $\gamma>1$, la asignación se pondera hacia valores de salida más bajos (más oscuros)
