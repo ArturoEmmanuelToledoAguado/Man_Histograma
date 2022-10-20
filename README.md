@@ -52,15 +52,15 @@ Esta función tambien permite argumentos tales como el rango de los valores de i
 
 <h5 align="center"><code>imcont=imadjust(img,[low_in high_in],[low_out high_out])</code></h5>
 
-* Nota: Los valores están ponderados en el rango entre 0 y 1,por lo que se requiere dividir el número entre 255 ($\frac{0 - 255}{255}$)
+* Nota: Los valores están ponderados en el rango entre 0 y 1,por lo que se requiere dividir el número entre 255 ( $\frac{0 - 255}{255}$ )
 
-### Gamma ($\gamma$) en imadjust
+### Gamma ( $\gamma$ ) en imadjust
 Finalmente también tenemos la opción de introducir el parámetro $\gamma$ que especifica la forma de la curva que mapea los valores de intensidad
 
 Gamma puede ser cualquier valor entre 0 e infinito. 
-  * Si $\gamma$=1 (valor predeterminado), la asignación es lineal
-  * Si $\gamma$<1, la asignación se pondera hacia valores de salida más altos (más brillantes).
-  * Si $\gamma$>1, la asignación se pondera hacia valores de salida más bajos (más oscuros)
+  * Si $\gamma=1$ (valor predeterminado), la asignación es lineal
+  * Si $\gamma<1$, la asignación se pondera hacia valores de salida más altos (más brillantes).
+  * Si $\gamma>1$, la asignación se pondera hacia valores de salida más bajos (más oscuros)
 
 <h5 align="center"><code>imcont=imadjust(img,[low_in high_in],[low_out high_out],gamma)</code></h5>
 
