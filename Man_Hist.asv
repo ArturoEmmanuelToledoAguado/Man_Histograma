@@ -2,7 +2,19 @@ clc;
 clear all;
 close all;
 
-%Abrir imagen
-prompt={"Ingrese el nombre de la imagen"};
+%Interfaz para pedir la imagen
+prompt={"Ingrese el nombre de la imagen con el .jpg"};
 title='Imagen';
-definput=[1 35];
+dims=[1 50];
+definput={'IMG/'};
+answer=inputdlg(prompt,title,dims,definput);
+
+%Abrir imagen
+img=imread(string(answer));
+
+%Mostramos original y su histograma
+figure()
+subplot(2,1,1)
+imshow(img)
+title('Original')
+subplot(2,1,2)
